@@ -1,0 +1,58 @@
+// Basis
+
+//== Make viewport responsive
+// see http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@at-root {
+	@viewport {
+		width: device-width;
+	}
+}
+
+//== Suppress the focus outline on elements that cannot be accessed via keyboard.
+// see: https://github.com/suitcss/base
+[tabindex="-1"]:focus {
+	outline: none;
+}
+
+//== Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
+// see:
+// http://v4-alpha.getbootstrap.com/content/reboot/#click-delay-optimization-for-touch
+// http://caniuse.com/#feat=css-touch-action
+// http://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+	touch-action: manipulation;
+}
+
+//== Basis
+//
+*:focus {
+	outline: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	min-width: $container;
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+	font-family: $font-family;
+	font-size: $font-size;
+	color: $text-color;
+	background-color: $bg-body;
+}

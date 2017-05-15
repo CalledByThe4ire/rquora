@@ -1,0 +1,25 @@
+// Links
+
+a {
+  text-decoration: none;
+  color: $link-color;
+  background-color: transparent;
+
+  &:link,
+  &:visited {
+	text-decoration: underline;
+	color: $link-color;
+  }
+
+  &:hover {
+	text-decoration: none;
+	color: $link-color--hover;
+	transition-duration: .3s;
+  }
+
+  &:active {
+	text-decoration: underline;
+	color: rgba($link-color--hover, 0.3);
+	transition-duration: 0s;
+  }
+}
