@@ -2,41 +2,9 @@
 
 @font-face {
 	font-family: 'MuseoSansCyr';
-	src: url('../fonts/MuseoSansCyrThin/MuseoSansCyrThin.woff') format('woff'),
-	url('../fonts/MuseoSansCyrThin/MuseoSansCyrThin.woff2') format('woff2');
-	font-weight: 100;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'MuseoSansCyr';
-	src: url('../fonts/MuseoSansCyrThin/MuseoSansCyrLight.woff') format('woff'),
-	url('../fonts/MuseoSansCyrThin/MuseoSansCyrLight.woff2') format('woff2');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'MuseoSansCyr';
-	src: url('../fonts/MuseoSansCyrThin/MuseoSansCyrRegular.woff') format('woff'),
-	url('../fonts/MuseoSansCyrThin/MuseoSansCyrRegular.woff2') format('woff2');
+	src: url('../fonts/MuseoSansCyr/MuseoSansCyrRegular.woff') format('woff'),
+	url('../fonts/MuseoSansCyr/MuseoSansCyrRegular.woff2') format('woff2');
 	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'MuseoSansCyr';
-	src: url('../fonts/MuseoSansCyrThin/MuseoSansCyrBold.woff') format('woff'),
-	url('../fonts/MuseoSansCyrThin/MuseoSansCyrBold.woff2') format('woff2');
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'MuseoSansCyr';
-	src: url('../fonts/MuseoSansCyrThin/MuseoSansCyrBlack.woff') format('woff'),
-	url('../fonts/MuseoSansCyrThin/MuseoSansCyrBlack.woff2') format('woff2');
-	font-weight: 900;
 	font-style: normal;
 }
 

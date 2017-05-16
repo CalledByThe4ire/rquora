@@ -1,0 +1,25 @@
+.question {
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color-secondary;
+		transition-duration: 0.3s;
+	}
+
+	&__symbol {
+		margin-bottom: 1rem;
+		font-size: 3.4rem;
+		line-height: 2.8rem;
+	}
+
+	&__text {
+		font-size: 1.5rem;
+		line-height: 1.7rem;
+	}
+
+	&__symbol,
+	&__text {
+		font-family: $font-family--sans-serif;
+		color: #ffffff;
+	}
+}

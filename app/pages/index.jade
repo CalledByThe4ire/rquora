@@ -2,10 +2,12 @@ extends ../blocks/layout-default/layout-default
 
 include ../blocks/index/index
 include ../blocks/container/container
+include ../blocks/page-header/page-header
 
 block head
 	- var pageTitle = 'New project';
 block content
 	+index
 		+container
+			+page-header
 

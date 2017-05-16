@@ -1,0 +1,7 @@
+mixin user-profile()
+	+b.user-profile&attributes(attributes)
+		+e('img').avatar(src='assets/images/content/avatar--01.jpg',
+		alt='учетная запись пользователя' width='120', height='120')
+		+e.rating
+			span Рейтинг
+			span 4.2

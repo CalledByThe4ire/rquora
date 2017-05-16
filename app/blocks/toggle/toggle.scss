@@ -1,0 +1,41 @@
+.toggle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 24px;
+
+	&__icon {
+		$icon: & __icon;
+		position: relative;
+		display: flex;
+		flex-basis: 30px;
+		height: 4px;
+		background-color: $color-tertiary;
+		pointer-events: none;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background-color: $color-tertiary;
+		}
+
+		&::before {
+			top: 10px;
+		}
+
+		&::after {
+			top: -10px;
+		}
+	}
+
+	&:hover .toggle__icon,
+	&:hover .toggle__icon::before,
+	&:hover .toggle__icon::after {
+		background-color: $color-secondary;
+		transition-duration: 0.3s;
+	}
+}

@@ -1,0 +1,7 @@
+mixin question()
+	+b.question&attributes(attributes)
+		+e('span').symbol ?
+		+e.text
+			| Задать
+			br
+			| вопрос
