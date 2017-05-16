@@ -1,0 +1,84 @@
+.text-field {
+	display: flex;
+	flex-direction: column;
+	flex-basis: #{percentage(2/2)};
+	margin-bottom: 2.5rem;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	@media #{$tab-desk} {
+		flex-direction: row;
+		margin-bottom: 2rem;
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		flex-basis: #{percentage(2/2)};
+
+		& .icon {
+			position: absolute;
+			top: 25px; // input's line-height: 5rem / 2
+			right: 0;
+			transform: translateY(-50%);
+		}
+
+		&:hover .icon,
+		&--focus .icon {
+			fill: $color-secondary;
+			transition-duration: 0.3s;
+		}
+	}
+
+	&__input,
+	&__caption {
+		font-family: Verdana, Arial, sans-serif;
+		font-size: 1.7rem;
+		line-height: 1.9rem;
+		color: $link-color;
+	}
+
+	&__input {
+		order: 10;
+		width: 100%;
+		padding-right: 35px;
+		font-weight: 400;
+		line-height: 5rem;
+		color: $color-primary;
+		background-color: transparent;
+		border: none;
+		border-bottom: 2px solid $color-primary;
+
+		&::placeholder,
+		&:focus::placeholder {
+			color: rgba($color-primary, 0.3);
+		}
+
+		&:focus,
+		&:hover {
+			border-color: $color-secondary;
+			transition-duration: 0.3s;
+		}
+
+		&:invalid {
+			border-color: #f0b1b1;
+			transition-duration: 0.3s;
+		}
+
+		@media #{$tab-desk} {
+			flex-grow: 1;
+		}
+	}
+
+	&__caption {
+		font-weight: 700;
+		color: $color-primary;
+
+		@media #{$tab-desk} {
+			align-self: center;
+			padding-right: 3rem;
+		}
+	}
+}
