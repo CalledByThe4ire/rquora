@@ -3,6 +3,7 @@
 		position: relative;
 		display: flex;
 		flex-basis: 100%;
+
 		padding-left: 5.2rem;
 	}
 
@@ -10,14 +11,17 @@
 		position: absolute;
 		top: 50%;
 		left: 0;
+
 		transform: translateY(-50%);
 	}
 
 	&__input {
 		width: 100%;
+
 		font-size: 1.9rem;
 		line-height: 2.8rem;
 		font-family: $font-family--sans-serif;
+
 		background-color: transparent;
 		border: none;
 

@@ -1,13 +1,14 @@
 extends ../blocks/layout-default/layout-default
 
 include ../blocks/index/index
-include ../blocks/container/container
 include ../blocks/page-header/page-header
 
+include ../blocks/main-content/main-content
+
 block head
-	- var pageTitle = 'New project';
+	- var pageTitle = 'rquora';
 block content
 	+index
-		+container
-			+page-header
+		+page-header
+		+main-content
 
