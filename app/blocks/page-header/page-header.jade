@@ -1,6 +1,6 @@
 include ../toggle/toggle
 include ../text-field/text-field
-include ../question/question
+include ../ask/ask
 include ../user-profile/user-profile
 
 mixin page-header()
@@ -12,7 +12,7 @@ mixin page-header()
 				+e('img').image(src='assets/images/logo.png', alt='rquora ' +
 				'logo', width='167', height='52')
 		+text-field(class='page-header__search')
-		+question(class='page-header__question')
+		+ask(class='page-header__ask')
 		+user-profile(class='page-header__user-profile')
 
 
