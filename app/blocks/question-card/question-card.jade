@@ -1,0 +1,17 @@
+include ../user-info/user-info
+include ../text-content/text-content
+
+mixin question-card(data)
+	+b.question-card&attributes(attributes)
+		+e('div').container
+			+e('a').close(href='#')
+				img(src='assets/images/icon__close.png', alt='\'close\' ' +
+				'icon', width='28', height='28')
+
+			each section in data.questionSection
+				+user-info(section.authorInfo)(class='question-card__user-info')
+				+text-content(section.questionInfo)(class='question-card__text-content')
+
+			each section in data.answersSection
+				+user-info(section.respondentInfo)(class='question-card__user-info')
+				+text-content(section.answerInfo)(class='question-card__text-content')

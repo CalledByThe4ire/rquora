@@ -1,0 +1,22 @@
+include ../filter/filter
+
+mixin text-content(data)
+		+b('article').text-content&attributes(attributes)
+
+			each item in data
+				+e('span').subscribers-counter !{item.subscrCounter}
+				+e('span').pub-date !{item.pubDate}
+
+				case item.contentType
+					when 'question'
+						+e('span').rubric !{item.rubric}
+						+e('header').question !{item.shortQuestion}
+						+e('div').answers-info
+							+e('span').answers-count !{item.answersCount}
+							+e('span').respondents-list !{item.respondentsList}
+						+e('div').extended-question !{item.extQuestion}
+
+						+filter(getData('answers-filter'))
+
+					when 'answer'
+						+e('div').answer !{item.answer}

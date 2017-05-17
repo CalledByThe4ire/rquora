@@ -1,0 +1,9 @@
+mixin user-info(data)
+	+b.user-info&attributes(attributes)
+		each item in data
+			+e('img').avatar(src='assets/images/content/' + item.imgSrc, alt=item.imgAlt, width=item.imgWidth, height=item.imgHeight)
+			+e('span').name !{item.name}
+			+e('span').activity !{item.activity}
+			+e('span').rating !{item.rating}
+			if !item.isFollowed
+				+e.subscribe(href='#') Подписаться

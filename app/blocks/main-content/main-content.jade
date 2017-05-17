@@ -1,5 +1,7 @@
 include ../filter/filter
+include ../question-card/question-card
 
 mixin main-content()
 	+b('main').main-content&attributes(attributes)
 		+filter(getData('questions-filter'))(class='--questions')
+		+question-card(getData('info'))
