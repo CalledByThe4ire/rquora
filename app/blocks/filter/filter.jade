@@ -1,9 +1,6 @@
-mixin filter()
-
-	- var filters = ['Актуальные', 'Новые', 'Обсуждаемые'];
-
+mixin filter(list)
 	+b.filter&attributes(attributes)
 		+e('ul').list
-			each filter in filters
+			each item in list
 				+e.item
-					+e.link(href='#')=filter
+					+e.link(href='#') !{item.filter}
