@@ -2,4 +2,4 @@ include ../filter/filter
 
 mixin main-content()
 	+b('main').main-content&attributes(attributes)
-		+filter(getData('questions-filter'))
+		+filter(getData('questions-filter'))(class='--questions')
