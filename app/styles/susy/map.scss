@@ -1,8 +1,10 @@
 // Susy grid settings
 //
 $susy: (
+		math: static,
 		columns: 12,
 		gutters: 0,
+		container: auto,
 		column-width: 100px,
 		global-box-sizing: border-box,
 		debug: (image: show)
