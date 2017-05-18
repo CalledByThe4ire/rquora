@@ -1,3 +1,9 @@
 .question-card {
 	display: block;
+	@include margin-y(3rem);
+
+	&__container {
+		display: flex;
+		border: 1px solid lighten($color-tertiary, 25%);
+	}
 }
