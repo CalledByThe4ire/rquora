@@ -1,22 +1,26 @@
 include ../filter/filter
 
 mixin text-content(data)
-		+b('article').text-content&attributes(attributes)
 
-			each item in data
-				+e('span').subscribers-counter !{item.subscrCounter}
-				+e('span').pub-date !{item.pubDate}
+	//- variables
+	- var filters = ["Сначала", "лучшие", "последние"];
 
-				case item.contentType
-					when 'question'
-						+e('span').rubric !{item.rubric}
-						+e('header').question !{item.shortQuestion}
-						+e('div').answers-info
-							+e('span').answers-count !{item.answersCount}
-							+e('span').respondents-list !{item.respondentsList}
-						+e('div').extended-question !{item.extQuestion}
+	+b('article').text-content&attributes(attributes)
 
-						+filter(getData('answers-filter'))
+		each item in data
+			+e('span').subscribers-counter !{item.subscrCounter}
+			+e('span').pub-date !{item.pubDate}
 
-					when 'answer'
-						+e('div').answer !{item.answer}
+			case item.contentType
+				when 'question'
+					+e('span').rubric !{item.rubric}
+					+e('header').question !{item.shortQuestion}
+					+e('div').answers-info
+						+e('span').answers-count !{item.answersCount}
+						+e('span').respondents-list !{item.respondentsList}
+					+e('div').extended-question !{item.extQuestion}
+
+					+filter(filters)
+
+				when 'answer'
+					+e('div').answer !{item.answer}

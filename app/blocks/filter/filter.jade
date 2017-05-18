@@ -3,4 +3,4 @@ mixin filter(list)
 		+e('ul').list
 			each item in list
 				+e.item
-					+e.link(href='#') !{item.filter}
+					+e.link(href='#')=item

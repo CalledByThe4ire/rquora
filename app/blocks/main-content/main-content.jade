@@ -2,6 +2,10 @@ include ../filter/filter
 include ../question-card/question-card
 
 mixin main-content()
+
+	//- variables
+	- var filters = ["Актуальные", "Новые", "Обсуждаемые"];
+
 	+b('main').main-content&attributes(attributes)
-		+filter(getData('questions-filter'))(class='--questions')
+		+filter(filters)(class='--questions')
 		+question-card(getData('info'))
