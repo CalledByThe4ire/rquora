@@ -9,14 +9,15 @@ mixin text-content(data)
 
 		each item in data
 			+e('span').subscribers-counter !{item.subscrCounter}
-			+e('span').pub-date !{item.pubDate}
+			+e('time').pub-date(datetime=item.pubDate4Machines) !{item.pubDate4Humans}
 
 			case item.contentType
 				when 'question'
 					+e('span').rubric !{item.rubric}
-					+e('header').question !{item.shortQuestion}
+					+e('header').question-header
+						+e('h1').question-heading !{item.shortQuestion}
 					+e('div').answers-info
-						+e('span').answers-count !{item.answersCount}
+						+e('span').answers-counter !{item.answersCount}
 						+e('span').respondents-list !{item.respondentsList}
 					+e('div').extended-question !{item.extQuestion}
 

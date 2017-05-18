@@ -10,9 +10,13 @@ mixin question-card(data)
 
 			each block in data
 				each section in block.questionSection
-					+user-info(section.authorInfo)(class='question-card__user-info')
-					+text-content(section.questionInfo)(class='question-card__text-content')
 
-				each section in block.answersSection
-					+user-info(section.respondentInfo)(class='question-card__user-info')
-					+text-content(section.answerInfo)(class='question-card__text-content')
+					+e('article').question
+						+user-info(section.authorInfo)(class='question-card__user-info')
+						+text-content(section.questionInfo)(class='question-card__text-content')
+
+					+e('section').answers
+						each section in block.answersSection
+							+e('article').answer
+								+user-info(section.respondentInfo)(class='question-card__user-info')
+								+text-content(section.answerInfo)(class='question-card__text-content')

@@ -1,5 +1,5 @@
 mixin user-info(data)
-	+b.user-info&attributes(attributes)
+	+b('article').user-info&attributes(attributes)
 		each item in data
 			+e('img').avatar(src='assets/images/content/' + item.imgSrc, alt=item.imgAlt, width=item.imgWidth, height=item.imgHeight)
 			+e('span').name !{item.name}
