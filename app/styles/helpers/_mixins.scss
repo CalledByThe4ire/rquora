@@ -56,3 +56,48 @@
 		background-image: url('../images/' + $image + '@2x.' + $ext);
 	}
 }
+
+// Set button properties
+@mixin btn($padding-x: 4.5rem, $padding-y: 1.5rem) {
+	display: flex;
+	justify-content: center;
+	@include padding-x($padding-x);
+	@include padding-y($padding-y);
+	white-space: nowrap;
+	vertical-align: middle;
+	font-size: $font-size / 0.875; // 1.6
+	line-height: $leading / 1.875;
+	font-family: $font-family--sans-serif;
+	color: $text-color;
+	font-weight: 700;
+	text-decoration: none;
+	background-color: transparent;
+	border: 2px solid $color-primary;
+	cursor: pointer;
+	user-select: none;
+
+	&:hover,
+	&--hover {
+		background-color: $color-secondary;
+		color: #ffffff;
+		text-decoration: none;
+		transition-duration: 0.3s;
+	}
+
+	&:active,
+	&--active {
+		background-color: $color-primary;
+		color: rgba(#ffffff, 0.3);
+		text-decoration: none;
+		outline: 0;
+		box-shadow: none;
+		transition-duration: 0.3s;
+	}
+
+	&:disabled,
+	&--disabled {
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+}

@@ -10,7 +10,7 @@ gulp.task('server', () => (
 		files: ['dist/**/*'],
 		open: !!OPEN,
 		reloadOnRestart: true,
-		port: PORT || 3000,
+		port: PORT || 3001,
 		snippetOptions: {
 			rule: {
 				match: /<\/body>/i

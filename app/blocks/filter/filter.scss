@@ -2,7 +2,8 @@
 	$rootParent: &;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 3rem;
+
+	min-height: 100px;
 
 	&__list {
 		display: flex;
@@ -15,14 +16,18 @@
 
 	&__link {
 		position: relative;
-		padding-top: 2rem;
 
 		display: flex;
 		flex-grow: 1;
 		justify-content: center;
 		align-items: center;
+		min-width: 145px;
 		min-height: 100%;
+		padding-top: 2rem;
+		@include padding-x(2rem);
 
+		font-size: 1.9rem;
+		line-height: 2.8rem;
 		font-family: $font-family--sans-serif;
 
 		background-color: transparent;
@@ -41,6 +46,7 @@
 
 			display: block;
 			width: 100%;
+			height: 4px;
 
 			background-color: $color-secondary;
 			opacity: 0;
@@ -66,22 +72,23 @@
 	}
 
 	&--questions {
-		min-height: 100px;
-
 		#{$rootParent}__list {
 			flex-basis: 485px;
 		}
+	}
+
+	&--answers {
+		justify-content: flex-start;
+
+		#{$rootParent}__list {
+			flex-basis: auto;
+			padding-left: 2rem;
+
+			border-bottom: 0;
+		}
 
 		#{$rootParent}__link {
-			min-width: 145px;
-			@include padding-x(2rem);
-
-			font-size: 1.9rem;
-			line-height: 2.8rem;
-
-			&::after {
-				height: 4px;
-			}
+			min-width: initial;
 		}
 	}
 

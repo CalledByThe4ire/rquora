@@ -8,9 +8,10 @@
 
 	&--detailed-view {
 		display: flex;
+		flex-wrap: wrap;
 		padding: span(1);
+
 		border: none;
-		outline: 1px dashed red;
 
 		#{$rootParent}__close {
 			position: absolute;
@@ -24,14 +25,56 @@
 		#{$rootParent}__question {
 			display: flex;
 			flex-basis: 100%;
+
+			margin-bottom: 7rem;
+
+			border-bottom: 1px solid lighten($color-tertiary, 25%);
 		}
 
 		#{$rootParent}__user-info {
+			display: flex;
+			flex-direction: column;
 			flex-basis: span(3);
 		}
 
 		#{$rootParent}__text-content {
-			flex-basis: span(10);
+			flex-basis: span(7);
+		}
+
+		#{$rootParent}__answers {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		#{$rootParent}__answer {
+			display: flex;
+			flex-basis: 100%;
+
+			margin-bottom: 7rem;
+
+			font-size: 2.3rem;
+			line-height: 3.5rem;
+
+			border-bottom: 1px solid lighten($color-tertiary, 25%);
+
+			& p {
+				margin: 0;
+				margin-bottom: 3.5rem;
+				padding: 0;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+				border-bottom: 0;
+
+				& .text-content__answer {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 }

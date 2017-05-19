@@ -1,4 +1,65 @@
 .user-info {
-	display: block;
-	outline: 1px dashed green;
+	$rootParent: &;
+
+	&--detailed-view {
+		display: flex;
+		padding-top: 10rem;
+
+		#{$rootParent}__avatar {
+			margin-bottom: 1rem;
+			border-radius: 50%;
+		}
+
+		#{$rootParent}__name,
+		#{$rootParent}__activity {
+			margin-bottom: 1.5rem;
+
+			font-family: $font-family--sans-serif;
+			color: $color-tertiary;
+		}
+
+		#{$rootParent}__name {
+			font-size: 1.6rem;
+			line-height: 2.2rem;
+		}
+
+		#{$rootParent}__activity {
+			font-size: 1.2rem;
+			line-height: 1.4rem;
+		}
+
+		#{$rootParent}__rating {
+			margin-bottom: 2rem;
+
+			font-size: 2.1rem;
+			line-height: 2.1rem;
+			color: $color-secondary;
+		}
+
+		a#{$rootParent}__subscribe {
+			align-self: flex-start;
+			@include btn(1.2rem, 0.7rem);
+			font-size: 1.2rem;
+			line-height: 1.4rem;
+			color: #ffffff;
+			text-decoration: none;
+
+			background-color: $color-secondary;
+			border: 2px solid $color-secondary;
+			border-radius: 5rem;
+
+			&:hover,
+			&--hover,
+			&:active,
+			&--active {
+				color: $color-secondary;
+				text-decoration: none;
+
+				background-color: #ffffff;
+				border: 2px solid $color-secondary;
+
+				transition-duration: 0.3s;
+			}
+		}
+	}
 }

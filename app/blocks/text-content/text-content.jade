@@ -5,23 +5,28 @@ mixin text-content(data)
 	//- variables
 	- var filters = ["Сначала", "лучшие", "последние"];
 
-	+b('article').text-content&attributes(attributes)
+	+b('article').text-content--detailed-view&attributes(attributes)
 
 		each item in data
-			+e('span').subscribers-counter !{item.subscrCounter}
-			+e('time').pub-date(datetime=item.pubDate4Machines) !{item.pubDate4Humans}
+			+e('div').secondary-content
+				+e('span').subscribers-counter !{item.subscrCounter}
+				+e('time').pub-date(datetime=item.pubDate4Machines) !{item.pubDate4Humans}
+
+				if item.rubric
+					+e('span').rubric !{item.rubric}
 
 			case item.contentType
 				when 'question'
-					+e('span').rubric !{item.rubric}
-					+e('header').question-header
-						+e('h1').question-heading !{item.shortQuestion}
-					+e('div').answers-info
-						+e('span').answers-counter !{item.answersCount}
-						+e('span').respondents-list !{item.respondentsList}
-					+e('div').extended-question !{item.extQuestion}
+					+e('div').main-content
+						+e('header').question-header
+							+e('h1').question-heading !{item.shortQuestion}
+						+e('div').answers-info
+							+e('span').answers-counter !{item.answersCount}
+							+e('span').respondents-list !{item.respondentsList}
+						+e('div').extended-question !{item.extQuestion}
 
-					+filter(filters)
+						+filter(filters)(class='--answers')
 
 				when 'answer'
-					+e('div').answer !{item.answer}
+					+e('div').main-content
+						+e('div').answer !{item.answer}
