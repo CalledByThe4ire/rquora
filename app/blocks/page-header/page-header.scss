@@ -3,6 +3,7 @@
 	align-items: center;
 	height: 100px;
 	@include margin-x(-100px);
+	margin-bottom: span(1);
 
 	background-color: #ffffff;
 	border-bottom: 1px solid lighten($color-tertiary, 25%);

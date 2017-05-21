@@ -5,7 +5,7 @@ mixin text-content(data)
 	//- variables
 	- var filters = ["Сначала", "лучшие", "последние"];
 
-	+b('article').text-content--detailed-view&attributes(attributes)
+	+b('article').text-content&attributes(attributes)
 
 		each item in data
 			+e('div').secondary-content
@@ -16,7 +16,7 @@ mixin text-content(data)
 					+e('span').subscribers-counter !{item.subscrCounter}
 
 				if item.contentType === 'answer'
-					+e('span').subscribers-counter !{item.subscrCounter}
+
 
 				+e('time').pub-date(datetime=item.pubDate4Machines) !{item.pubDate4Humans}
 

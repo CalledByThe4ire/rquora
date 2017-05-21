@@ -2,7 +2,7 @@ include ../user-info/user-info
 include ../text-content/text-content
 
 mixin question-card(data)
-	+b('section').question-card--detailed-view&attributes(attributes)
+	+b('section').question-card&attributes(attributes)
 		+e('a').close(href='#')
 			img(src='assets/images/icon__close.png', alt='\'close\' ' +
 			'icon', width='28', height='28')
