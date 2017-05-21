@@ -15,7 +15,8 @@ mixin question-card(data)
 					+text-content(section.questionInfo)(class='question-card__text-content')
 
 				+e('section').answers
-					each section in block.answersSection
-						+e('article').answer
-							+user-info(section.respondentInfo)(class='question-card__user-info')
-							+text-content(section.answerInfo)(class='question-card__text-content')
+					if block.answersSection
+						each section in block.answersSection
+							+e('article').answer
+								+user-info(section.respondentInfo)(class='question-card__user-info')
+								+text-content(section.answerInfo)(class='question-card__text-content')
