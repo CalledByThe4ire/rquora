@@ -9,7 +9,15 @@ mixin text-content(data)
 
 		each item in data
 			+e('div').secondary-content
-				+e('span').subscribers-counter !{item.subscrCounter}
+				if item.contentType === 'question' && !item.hasFollowers
+					+e.subscribe(href='#') Подписаться
+
+				if item.contentType === 'question' && item.hasFollowers
+					+e('span').subscribers-counter !{item.subscrCounter}
+
+				if item.contentType === 'answer'
+					+e('span').subscribers-counter !{item.subscrCounter}
+
 				+e('time').pub-date(datetime=item.pubDate4Machines) !{item.pubDate4Humans}
 
 				if item.rubric
@@ -21,7 +29,7 @@ mixin text-content(data)
 						+e('header').question-header
 							+e('h1').question-heading !{item.shortQuestion}
 
-						if item.answersCount
+						if item.hasAnswers
 							+e('div').answers-info
 								+e('span').answers-counter !{item.answersCount}
 								+e('span').respondents-list !{item.respondentsList}
