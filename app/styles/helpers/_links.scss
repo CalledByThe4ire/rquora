@@ -1,25 +1,22 @@
 // Links
 
 a {
-  text-decoration: none;
-  color: $link-color;
-  background-color: transparent;
-
-  &:link,
-  &:visited {
-	text-decoration: underline;
-	color: $link-color;
-  }
-
-  &:hover {
 	text-decoration: none;
-	color: $link-color--hover;
-	transition-duration: .3s;
-  }
+	background-color: transparent;
 
-  &:active {
-	text-decoration: underline;
-	color: rgba($link-color--hover, 0.3);
-	transition-duration: 0s;
-  }
+	&:link,
+	&:visited {
+		color: $link-color;
+		transition-duration: .3s;
+	}
+
+	&:hover {
+		color: $link-color--hover;
+		transition-duration: .3s;
+	}
+
+	&:active {
+		color: $link-color--active;
+		transition-duration: 0s;
+	}
 }

@@ -1,6 +1,7 @@
 .filter {
 	$rootParent: &;
 	display: flex;
+	flex-basis: 100%;
 	justify-content: center;
 
 	min-height: 100px;
@@ -72,12 +73,15 @@
 	}
 
 	&--questions {
+		margin-bottom: 3.5rem;
+
 		#{$rootParent}__list {
 			flex-basis: 485px;
 		}
 	}
 
 	&--answers {
+		display: none;
 		justify-content: flex-start;
 
 		#{$rootParent}__list {

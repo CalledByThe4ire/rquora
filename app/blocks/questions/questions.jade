@@ -1,3 +1,10 @@
+include ../filter/filter
+
 mixin questions()
+	//- variables
+	- var filters = ["Актуальные", "Новые", "Обсуждаемые"];
+
 	+b.questions&attributes(attributes)
-		block
+		+filter(filters)(class='--questions')
+		+e('div').container
+			block

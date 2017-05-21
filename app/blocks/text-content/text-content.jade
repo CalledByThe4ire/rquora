@@ -16,9 +16,8 @@ mixin text-content(data)
 					+e('span').subscribers-counter !{item.subscrCounter}
 
 				if item.contentType === 'answer'
-
-
-				+e('time').pub-date(datetime=item.pubDate4Machines) !{item.pubDate4Humans}
+					+e('span').subscribers-counter !{item.subscrCounter}
+					+e('time').pub-date(datetime=item.pubDate4Machines) !{item.pubDate4Humans}
 
 				if item.rubric
 					+e('span').rubric !{item.rubric}

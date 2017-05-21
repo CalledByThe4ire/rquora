@@ -2,21 +2,22 @@ include ../user-info/user-info
 include ../text-content/text-content
 
 mixin question-card(data)
-	+b('section').question-card&attributes(attributes)
-		+e('a').close(href='#')
-			img(src='assets/images/icon__close.png', alt='\'close\' ' +
-			'icon', width='28', height='28')
-
 		each block in data
 			each section in block.questionSection
+				+b('section').question-card&attributes(attributes)
+					+e('a').close(href='#')
+						img(src='assets/images/icon__close.png', alt='\'close\' ' +
+						'icon', width='28', height='28')
+					+e('article').question
+						+user-info(section.authorInfo)(class='question-card__user-info')
+						+text-content(section.questionInfo)(class='question-card__text-content')
 
-				+e('article').question
-					+user-info(section.authorInfo)(class='question-card__user-info')
-					+text-content(section.questionInfo)(class='question-card__text-content')
-
-				+e('section').answers
-					if block.answersSection
-						each section in block.answersSection
-							+e('article').answer
-								+user-info(section.respondentInfo)(class='question-card__user-info')
-								+text-content(section.answerInfo)(class='question-card__text-content')
+					+e('section').answers
+						if block.answersSection
+							each section in block.answersSection
+								+e('article').answer
+									+user-info(section.respondentInfo)(class='question-card__user-info')
+									+text-content(section.answerInfo)(class='question-card__text-content')
+									+e('span').extended-answer
+										a(href='#')
+											| Читать полный ответ

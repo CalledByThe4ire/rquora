@@ -1,6 +1,13 @@
 .questions {
 	display: block;
-	margin-bottom: 3rem;
-	border: 1px solid lighten($color-tertiary, 25%);
-	border-top: none;
+
+	&__container {
+		display: block;
+		width: 100%;
+		max-width: span(12);
+		column-width: calc(#{span(6)} - 2px);
+		column-gap: 0;
+		@include margin-x(auto);
+		margin-bottom: 3rem;
+	}
 }

@@ -1,5 +1,82 @@
 .user-info {
 	$rootParent: &;
+	padding-left: 4rem;
+
+	&__avatar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-right: 1rem;
+
+		& img {
+			border-radius: 50%;
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__name,
+	&__activity,
+	&__rating {
+		font-family: $font-family--sans-serif;
+	}
+
+	&__name,
+	&__rating {
+		order: -5;
+	}
+
+	&__name {
+		padding-right: 1rem;
+
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		color: $color-tertiary;
+	}
+
+	&__activity {
+		flex-basis: 100%;
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		color: lighten($color-tertiary, 25%);
+	}
+
+	&__rating {
+		font-size: 1.6rem;
+		line-height: 2.2rem;
+		color: $color-secondary;
+	}
+
+	a#{$rootParent}__subscribe {
+		@include btn(1.2rem, 0.7rem);
+		display: none;
+
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		color: #ffffff;
+		text-decoration: none;
+
+		background-color: $color-secondary;
+		border: 2px solid $color-secondary;
+		border-radius: 5rem;
+
+		&:hover,
+		&--hover,
+		&:active,
+		&--active {
+			color: $color-secondary;
+			text-decoration: none;
+
+			background-color: #ffffff;
+			border: 2px solid $color-secondary;
+
+			transition-duration: 0.3s;
+		}
+
+	}
 
 	&--detailed-view {
 		display: flex;
@@ -7,7 +84,6 @@
 
 		#{$rootParent}__avatar {
 			margin-bottom: 1rem;
-			border-radius: 50%;
 		}
 
 		#{$rootParent}__name,
@@ -38,28 +114,6 @@
 
 		a#{$rootParent}__subscribe {
 			align-self: flex-start;
-			@include btn(1.2rem, 0.7rem);
-			font-size: 1.2rem;
-			line-height: 1.4rem;
-			color: #ffffff;
-			text-decoration: none;
-
-			background-color: $color-secondary;
-			border: 2px solid $color-secondary;
-			border-radius: 5rem;
-
-			&:hover,
-			&--hover,
-			&:active,
-			&--active {
-				color: $color-secondary;
-				text-decoration: none;
-
-				background-color: #ffffff;
-				border: 2px solid $color-secondary;
-
-				transition-duration: 0.3s;
-			}
 		}
 	}
 }
