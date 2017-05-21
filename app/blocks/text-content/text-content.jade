@@ -20,12 +20,18 @@ mixin text-content(data)
 					+e('div').main-content
 						+e('header').question-header
 							+e('h1').question-heading !{item.shortQuestion}
-						+e('div').answers-info
-							+e('span').answers-counter !{item.answersCount}
-							+e('span').respondents-list !{item.respondentsList}
-						+e('div').extended-question !{item.extQuestion}
 
-						+filter(filters)(class='--answers')
+						if item.answersCount
+							+e('div').answers-info
+								+e('span').answers-counter !{item.answersCount}
+								+e('span').respondents-list !{item.respondentsList}
+							+e('div').extended-question !{item.extQuestion}
+
+							+filter(filters)(class='--answers')
+
+						else
+							+e('div').answers-info--empty Нет ответов
+							+e('a').reply(href='#') Ответить
 
 				when 'answer'
 					+e('div').main-content

@@ -67,6 +67,11 @@
 			line-height: 2rem;
 			font-family: $font-family--sans-serif;
 			color: $color-tertiary;
+
+			&--empty {
+				margin-bottom: 0.5rem;
+				color: lighten($color-tertiary, 25%);
+			}
 		}
 
 		#{$rootParent}__answers-counter {
@@ -77,6 +82,25 @@
 
 		#{$rootParent}__respondents-list {
 			color: lighten($color-tertiary, 25%);
+		}
+
+		#{$rootParent}__reply {
+			display: block;
+
+			font-size: 1.3rem;
+			line-height: 2rem;
+			font-family: $font-family--sans-serif;
+			color: $color-tertiary;
+			text-align: center;
+			text-decoration: none;
+
+			&:hover,
+			&--hover,
+			&_active,
+			&--active {
+				color: $color-secondary;
+				transition-duration: 0.3s;
+			}
 		}
 
 		#{$rootParent}__extended-question {
