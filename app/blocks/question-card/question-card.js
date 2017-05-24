@@ -4,6 +4,12 @@ import utils from '../../scripts/utils';
 
 export default window.addEventListener('DOMContentLoaded', () => {
 
+	// variables
+	const indexContainer = document.querySelector('.index__container');
+	const questionsContainer = document.querySelector('.questions__container');
+	const filters = document.querySelectorAll('.filter');
+	const avatars = Array.prototype.slice.call(document.querySelectorAll('.user-info__avatar img'));
+
 	// question-card variables
 	const questionCardCollection = Array.prototype.slice.call(document.querySelectorAll('.question-card'));
 	const detailedViewLinkCollection = Array.prototype.slice.call(document.querySelectorAll('.question-card__extended-answer a'));
@@ -13,6 +19,12 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	const textContent = Array.prototype.slice.call(document.querySelectorAll('.question-card__answer .text-content'));
 	const answer = Array.prototype.slice.call(document.querySelectorAll('.text-content__answer'));
 	const firstP = Array.prototype.slice.call(document.querySelectorAll('.text-content__answer > p:first-child'));
+
+	// reduce image size by default
+	avatars.forEach(avatar => {
+		avatar.setAttribute('width', '45');
+		avatar.setAttribute('height', '41');
+	});
 
 	// truncateString variables
 	const len = 150;
@@ -36,6 +48,25 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		const questionCard = utils.closest(evt.target, '.question-card');
 		const currentTextContent = Array.prototype.slice.call(questionCard.querySelectorAll('.text-content'));
 		const currentUserInfo = Array.prototype.slice.call(questionCard.querySelectorAll('.user-info'));
+
+		indexContainer.classList.add('index__container--transparent');
+		questionCard.classList.add('question-card--background-color');
+		questionsContainer.classList.add('questions__container--full-width');
+
+		filters.forEach(filter => {
+			if (filter.classList.contains('filter--questions')) {
+				filter.classList.add('filter--hidden');
+			}
+			if (filter.classList.contains('filter--answers')) {
+				filter.classList.remove('filter--hidden');
+			}
+		});
+
+		avatars.forEach(avatar => {
+			avatar.setAttribute('width', '90');
+			avatar.setAttribute('height', '82');
+		});
+
 
 		questionCardCollection.forEach(elem => {
 
@@ -72,6 +103,24 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		const questionCard = utils.closest(evt.target, '.question-card');
 		const currentTextContent = Array.prototype.slice.call(questionCard.querySelectorAll('.text-content'));
 		const currentUserInfo = Array.prototype.slice.call(questionCard.querySelectorAll('.user-info'));
+
+		indexContainer.classList.remove('index__container--transparent');
+		questionCard.classList.remove('question-card--background-color');
+		questionsContainer.classList.remove('questions__container--full-width');
+
+		filters.forEach(filter => {
+			if (filter.classList.contains('filter--questions')) {
+				filter.classList.remove('filter--hidden');
+			}
+			if (filter.classList.contains('filter--answers')) {
+				filter.classList.add('filter--hidden');
+			}
+		});
+
+		avatars.forEach(avatar => {
+			avatar.setAttribute('width', '45');
+			avatar.setAttribute('height', '41');
+		});
 
 		questionCardCollection.forEach(elem => {
 

@@ -3,13 +3,11 @@
 	display: flex;
 	flex-basis: 100%;
 	justify-content: center;
-
 	min-height: 100px;
 
 	&__list {
 		display: flex;
 		justify-content: center;
-
 		@include list-clear();
 
 		border-bottom: 1px solid lighten($color-tertiary, 25%);
@@ -81,7 +79,6 @@
 	}
 
 	&--answers {
-		display: none;
 		justify-content: flex-start;
 
 		#{$rootParent}__list {
@@ -96,4 +93,7 @@
 		}
 	}
 
+	&--hidden {
+		display: none;
+	}
 }

@@ -6,13 +6,14 @@
 	height: 24px;
 
 	&__icon {
-		$icon: & __icon;
 		position: relative;
+
 		display: flex;
 		flex-basis: 30px;
 		height: 4px;
 
 		background-color: $color-tertiary;
+
 		pointer-events: none;
 
 		&::before,

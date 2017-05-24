@@ -12,12 +12,8 @@ mixin text-content(data)
 				if item.contentType === 'question' && !item.hasFollowers
 					+e.subscribe(href='#') Подписаться
 
-				if item.contentType === 'question' && item.hasFollowers
-					+e('span').subscribers-counter !{item.subscrCounter}
-
-				if item.contentType === 'answer'
-					+e('span').subscribers-counter !{item.subscrCounter}
-					+e('time').pub-date(datetime=item.pubDate4Machines) !{item.pubDate4Humans}
+				+e('span').subscribers-counter !{item.subscrCounter}
+				+e('time').pub-date(datetime=item.pubDate4Machines) !{item.pubDate4Humans}
 
 				if item.rubric
 					+e('span').rubric !{item.rubric}
@@ -36,7 +32,7 @@ mixin text-content(data)
 								+e('span').respondents-list Отвечают: !{item.respondentsList}
 							+e('div').lead !{item.lead}
 
-							+filter(filters)(class='--answers')
+							+filter(filters)(class='--answers --hidden')
 
 						else
 							+e('div').answers-info--empty Нет ответов

@@ -2,10 +2,16 @@
 	display: block;
 
 	&__container {
+		//@include show-grid();
 		@include container();
-		@include show-grid();
+		padding-bottom: 5rem;
 
+		background-color: #ffffff;
 		border: 1px solid lighten($color-tertiary, 25%);
 		border-top: none;
+
+		&--transparent {
+			background-color: transparent;
+		}
 	}
 }

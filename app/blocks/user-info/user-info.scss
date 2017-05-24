@@ -39,6 +39,7 @@
 
 	&__activity {
 		flex-basis: 100%;
+
 		font-size: 1.2rem;
 		line-height: 1.4rem;
 		color: lighten($color-tertiary, 25%);
@@ -62,27 +63,15 @@
 		background-color: $color-secondary;
 		border: 2px solid $color-secondary;
 		border-radius: 5rem;
-
-		&:hover,
-		&--hover,
-		&:active,
-		&--active {
-			color: $color-secondary;
-			text-decoration: none;
-
-			background-color: #ffffff;
-			border: 2px solid $color-secondary;
-
-			transition-duration: 0.3s;
-		}
-
 	}
 
 	&--detailed-view {
 		display: flex;
 		padding-top: 10rem;
+		padding-left: 0;
 
 		#{$rootParent}__avatar {
+			margin-right: auto;
 			margin-bottom: 1rem;
 		}
 
@@ -105,6 +94,7 @@
 		}
 
 		#{$rootParent}__rating {
+			order: 0;
 			margin-bottom: 2rem;
 
 			font-size: 2.1rem;
@@ -114,6 +104,14 @@
 
 		a#{$rootParent}__subscribe {
 			align-self: flex-start;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			a#{$rootParent}__subscribe {
+				display: flex;
+			}
 		}
 	}
 }

@@ -5,9 +5,13 @@
 		display: block;
 		width: 100%;
 		max-width: span(12);
-		column-width: calc(#{span(6)} - 2px);
-		column-gap: 0;
 		@include margin-x(auto);
 		margin-bottom: 3rem;
+		column-width: calc(#{span(6)} - 2px);
+		column-gap: 0;
+
+		&--full-width {
+			column-width: span(12);
+		}
 	}
 }
