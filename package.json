@@ -106,6 +106,7 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "jquery": "^3.1.1",
     "lory.js": "^2.2.1",
     "susy": "^2.2.12",
