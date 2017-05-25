@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1400">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="application-name" content="">
+		<meta name="msapplication-tooltip" content="">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" sizes="16x16" type="image/png" href="favicon-16x16.png">
+		<link rel="icon" sizes="32x32" type="image/png" href="favicon-32x32.png">
+		<link rel="manifest" href="manifest.json">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<title>rquora</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+	</head>
+
+	<body class="page">
+		<div class="index">
+			<div class="index__container">
+				<header class="page-header">
+					<a class="toggle page-header__toggle" href="javascript:void(0)" onclick="return false">
+						<div class="toggle__icon"></div>
+					</a>
+					<div class="page-header__logo">
+						<a href="index.html" class="page-header__link">
+							<img src="assets/images/logo.png" alt="rquora logo" width="167" height="52" class="page-header__image" title="" />
+						</a>
+					</div>
+					<label class="text-field page-header__search">
+						<div class="text-field__container">
+							<img src="assets/images/icon__search.png" alt="search icon" width="32" height="32" class="text-field__icon text-field__icon--search"
+							 title="" />
+							<input type="search" placeholder="Найти ответ..." class="text-field__input" />
+						</div>
+					</label>
+					<div class="ask page-header__ask">
+						<span class="ask__symbol">?</span>
+						<div class="ask__text">Задать
+							<br/>вопрос</div>
+					</div>
+					<div class="user-profile page-header__user-profile">
+						<img src="assets/images/content/avatar--01.jpg" alt="учетная запись пользователя" width="120" height="120" class="user-profile__avatar"
+						 title="" />
+						<div class="user-profile__rating">
+							<span>Рейтинг</span>
+							<span>4.2</span>
+						</div>
+					</div>
+				</header>
+				<main class="main-content" role="main">
+					<div class="questions">
+						<div class="filter filter--questions">
+							<ul class="filter__list">
+								<li class="filter__item">
+									<a href="#" class="filter__link">Актуальные</a>
+								</li>
+								<li class="filter__item">
+									<a href="#" class="filter__link">Новые</a>
+								</li>
+								<li class="filter__item">
+									<a href="#" class="filter__link">Обсуждаемые</a>
+								</li>
+							</ul>
+						</div>
+						<div class="questions__container">
+							<section class="question-card">
+								<a href="#" class="question-card__close">
+									<img src="assets/images/icon__close.png" alt="'close' icon" width="28" height="28" />
+								</a>
+								<article class="question-card__question">
+									<article class="user-info question-card__user-info">
+										<div class="user-info__avatar">
+											<img src="assets/images/content/avatar--02.jpg" alt="Константин Константинопольский" width="90" height="82" />
+										</div>
+										<div class="user-info__container">
+											<span class="user-info__name">Константин Константинопольский</span>
+											<span class="user-info__activity">Журналист, блогер</span>
+											<span class="user-info__rating">3.9</span>
+										</div>
+										<a href="#" class="user-info__subscribe">Подписаться</a>
+									</article>
+									<article class="text-content question-card__text-content">
+										<div class="text-content__secondary-content">
+											<span class="text-content__subscribers-counter">2,3K</span>
+											<time datetime="2017-09-27" class="text-content__pub-date">27&nbsp;сен</time>
+											<span class="text-content__rubric">Экономика</span>
+										</div>
+										<div class="text-content__main-content">
+											<header class="text-content__question-header">
+												<h1 class="text-content__question-heading">Почему ЦБ отозвал лицензию у&nbsp;московского «Банк24.ру»?</h1>
+											</header>
+											<div class="text-content__answers-info">
+												<span class="text-content__answers-counter">42 ответа</span>
+												<span class="text-content__respondents-list">Отвечают: Оксана Ящина, Виталий Васильченко, Анатолий Онопченко, Михаил Варагин, Павел Пещеряков, Мария Логинова</span>
+											</div>
+											<div class="text-content__lead">
+												<p>Центральный банк России отозвал лицензию на осуществление банковских операций у&nbsp;московского «Банк24.ру»,
+													сообщается в пресс-релизе ЦБ.</p>
+												<p>Говорят, банк не соблюдал требования законодательства в области противодействия легализации (отмыванию) доходов,
+													полученных преступным путем, и финансированию терроризма.</p>
+												<p>Что об этом думают эксперты?</p>
+											</div>
+											<div class="filter filter--answers filter--hidden">
+												<ul class="filter__list">
+													<li class="filter__item">
+														<a href="#" class="filter__link">Сначала</a>
+													</li>
+													<li class="filter__item">
+														<a href="#" class="filter__link">лучшие</a>
+													</li>
+													<li class="filter__item">
+														<a href="#" class="filter__link">последние</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+								</article>
+								<section class="question-card__answers">
+									<article id="answer71" class="question-card__answer">
+										<article class="user-info question-card__user-info">
+											<div class="user-info__avatar">
+												<img src="assets/images/content/avatar--03.jpg" alt="Оксана Ящина" width="90" height="82" />
+											</div>
+											<div class="user-info__container">
+												<span class="user-info__name">Оксана Ящина</span>
+												<span class="user-info__activity">Главный аналитик, РБК</span>
+												<span class="user-info__rating">7.6</span>
+											</div>
+											<a href="#" class="user-info__subscribe">Подписаться</a>
+										</article>
+										<article class="text-content question-card__text-content">
+											<div class="text-content__secondary-content">
+												<span class="text-content__subscribers-counter">2,3K</span>
+												<time datetime="2017-09-27" class="text-content__pub-date">27&nbsp;сен</time>
+											</div>
+											<div class="text-content__main-content">
+												<div class="text-content__answer">
+													<p>К сожалению, у меня нет возможности ответить Вам на канале «Россия 24», просто потому, что людей с моей точкой
+														зрения на такие каналы не пускают. Там показывают только тех, кто разделяет Вашу позицию. Видимо, поэтому Вам
+														и приходится общаться с экраном, а не с живым Макаревичем, Собчак или кем-то другим в студии.</p>
+													<p>При этом мое приглашение встретиться с Вами в прямом эфире моей программы «Собчак живьем» остается в силе. Я
+														знаю, что Вы человек в себе уверенный, и мы вполне могли бы поговорить уже в режиме живой беседы, а не актерского
+														монолога. Но пока — пишу Вам ответ здесь.</p>
+												</div>
+											</div>
+										</article>
+										<span class="question-card__extended-answer">
+											<a href="#answer71">Читать полный ответ</a>
+										</span>
+									</article>
+									<article id="answer7" class="question-card__answer">
+										<article class="user-info question-card__user-info">
+											<div class="user-info__avatar">
+												<img src="assets/images/content/avatar--04.jpg" alt="Виталий Васильченко" width="90" height="82" />
+											</div>
+											<div class="user-info__container">
+												<span class="user-info__name">Виталий Васильченко</span>
+												<span class="user-info__activity">Главред «Деловая среда»</span>
+												<span class="user-info__rating">7.6</span>
+											</div>
+											<a href="#" class="user-info__subscribe">Подписаться</a>
+										</article>
+										<article class="text-content question-card__text-content">
+											<div class="text-content__secondary-content">
+												<span class="text-content__subscribers-counter">2,3K</span>
+												<time datetime="2017-05-16T09:03" class="text-content__pub-date">Вт,&nbsp;9:03</time>
+											</div>
+											<div class="text-content__main-content">
+												<div class="text-content__answer">
+													<p>К сожалению, у меня нет возможности ответить Вам на канале «Россия 24», просто потому, что людей с моей точкой
+														зрения на такие каналы не пускают. Там показывают только тех, кто разделяет Вашу позицию. Видимо, поэтому Вам
+														и приходится общаться с экраном, а не с живым Макаревичем, Собчак или кем-то другим в студии.</p>
+													<p>При этом мое приглашение встретиться с Вами в прямом эфире моей программы «Собчак живьем» остается в силе. Я
+														знаю, что Вы человек в себе уверенный, и мы вполне могли бы поговорить уже в режиме живой беседы, а не актерского
+														монолога. Но пока — пишу Вам ответ здесь.</p>
+												</div>
+											</div>
+										</article>
+										<span class="question-card__extended-answer">
+											<a href="#answer7">Читать полный ответ</a>
+										</span>
+									</article>
+								</section>
+							</section>
+							<section class="question-card">
+								<a href="#" class="question-card__close">
+									<img src="assets/images/icon__close.png" alt="'close' icon" width="28" height="28" />
+								</a>
+								<article class="question-card__question">
+									<article class="user-info question-card__user-info">
+										<div class="user-info__avatar">
+											<img src="assets/images/content/avatar--02.jpg" alt="Константин Константинопольский" width="90" height="82" />
+										</div>
+										<div class="user-info__container">
+											<span class="user-info__name">Константин Константинопольский</span>
+											<span class="user-info__activity">Журналист, блогер</span>
+											<span class="user-info__rating">3.9</span>
+										</div>
+										<a href="#" class="user-info__subscribe">Подписаться</a>
+									</article>
+									<article class="text-content question-card__text-content">
+										<div class="text-content__secondary-content">
+											<span class="text-content__subscribers-counter">1,9K</span>
+											<time datetime="2016-08-13" class="text-content__pub-date">13&nbsp;авг</time>
+											<span class="text-content__rubric">Экономика</span>
+										</div>
+										<div class="text-content__main-content">
+											<header class="text-content__question-header">
+												<h1 class="text-content__question-heading">Что происходит с рублем?</h1>
+											</header>
+											<div class="text-content__answers-info">
+												<span class="text-content__answers-counter">26 ответов</span>
+												<span class="text-content__respondents-list">Отвечают: Георгий Неяскин, Кирилл Горин, Елена Вороненко, Джон Николсон, Дмитрий Долгов, Александр Панфилов</span>
+											</div>
+											<div class="text-content__lead">
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+											</div>
+											<div class="filter filter--answers filter--hidden">
+												<ul class="filter__list">
+													<li class="filter__item">
+														<a href="#" class="filter__link">Сначала</a>
+													</li>
+													<li class="filter__item">
+														<a href="#" class="filter__link">лучшие</a>
+													</li>
+													<li class="filter__item">
+														<a href="#" class="filter__link">последние</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+								</article>
+								<section class="question-card__answers">
+									<article id="answer19" class="question-card__answer">
+										<article class="user-info question-card__user-info">
+											<div class="user-info__avatar">
+												<img src="assets/images/content/avatar--05.jpg" alt="Георгий Неяскин" width="90" height="82" />
+											</div>
+											<div class="user-info__container">
+												<span class="user-info__name">Георгий Неяскин</span>
+												<span class="user-info__activity">Зам. президента ассоциации Российских Банков</span>
+												<span class="user-info__rating">7.6</span>
+											</div>
+											<a href="#" class="user-info__subscribe">Подписаться</a>
+										</article>
+										<article class="text-content question-card__text-content">
+											<div class="text-content__secondary-content">
+												<span class="text-content__subscribers-counter">2,3K</span>
+												<time datetime="2016-08-14" class="text-content__pub-date">14&nbsp;авг</time>
+											</div>
+											<div class="text-content__main-content">
+												<div class="text-content__answer">
+													<p>Дешевеющая нефть. В течение последнего года курсы рубля и стоимость барреля были связаны не так сильно, как
+														наблюдалась до этого. Нефть сейчас вроде бы дороже, чем в годы кризиса, но рубль при этом слабее.</p>
+													<p>Дешевеющая нефть. В течение последнего года курсы рубля и стоимость барреля были связаны не так сильно, как
+														наблюдалась до этого. Нефть сейчас вроде бы дороже, чем в годы кризиса, но рубль при этом слабее.</p>
+													<p>Дешевеющая нефть. В течение последнего года курсы рубля и стоимость барреля были связаны не так сильно, как
+														наблюдалась до этого. Нефть сейчас вроде бы дороже, чем в годы кризиса, но рубль при этом слабее.</p>
+													<p>Дешевеющая нефть. В течение последнего года курсы рубля и стоимость барреля были связаны не так сильно, как
+														наблюдалась до этого. Нефть сейчас вроде бы дороже, чем в годы кризиса, но рубль при этом слабее.</p>
+												</div>
+											</div>
+										</article>
+										<span class="question-card__extended-answer">
+											<a href="#answer19">Читать полный ответ</a>
+										</span>
+									</article>
+								</section>
+							</section>
+							<section class="question-card">
+								<a href="#" class="question-card__close">
+									<img src="assets/images/icon__close.png" alt="'close' icon" width="28" height="28" />
+								</a>
+								<article class="question-card__question">
+									<article class="user-info question-card__user-info">
+										<div class="user-info__avatar">
+											<img src="assets/images/content/avatar--02.jpg" alt="Константин Константинопольский" width="90" height="82" />
+										</div>
+										<div class="user-info__container">
+											<span class="user-info__name">Константин Константинопольский</span>
+											<span class="user-info__activity">Журналист, блогер</span>
+											<span class="user-info__rating">3.9</span>
+										</div>
+										<a href="#" class="user-info__subscribe">Подписаться</a>
+									</article>
+									<article class="text-content question-card__text-content">
+										<div class="text-content__secondary-content">
+											<span class="text-content__subscribers-counter">1,9K</span>
+											<time datetime="2016-08-13" class="text-content__pub-date">13&nbsp;авг</time>
+											<span class="text-content__rubric">Еда</span>
+										</div>
+										<div class="text-content__main-content">
+											<header class="text-content__question-header">
+												<h1 class="text-content__question-heading">Что известно о&nbsp;кофе?</h1>
+											</header>
+											<div class="text-content__answers-info text-content__answers-info--empty">Нет ответов</div>
+											<a href="#" class="text-content__reply">Ответить</a>
+										</div>
+									</article>
+								</article>
+								<section class="question-card__answers"></section>
+							</section>
+							<section class="question-card">
+								<a href="#" class="question-card__close">
+									<img src="assets/images/icon__close.png" alt="'close' icon" width="28" height="28" />
+								</a>
+								<article class="question-card__question">
+									<article class="user-info question-card__user-info">
+										<div class="user-info__avatar">
+											<img src="assets/images/content/avatar--02.jpg" alt="Константин Константинопольский" width="90" height="82" />
+										</div>
+										<div class="user-info__container">
+											<span class="user-info__name">Константин Константинопольский</span>
+											<span class="user-info__activity">Журналист, блогер</span>
+											<span class="user-info__rating">3.9</span>
+										</div>
+										<a href="#" class="user-info__subscribe">Подписаться</a>
+									</article>
+									<article class="text-content question-card__text-content">
+										<div class="text-content__secondary-content">
+											<span class="text-content__subscribers-counter">2,1K</span>
+											<time datetime="2016-06-03" class="text-content__pub-date">03&nbsp;июн</time>
+											<span class="text-content__rubric">Бизнес</span>
+										</div>
+										<div class="text-content__main-content">
+											<header class="text-content__question-header">
+												<h1 class="text-content__question-heading">Правда ли, что за логотип Москвы и метро студия Лебедева получила 117 млн р.?</h1>
+											</header>
+											<div class="text-content__answers-info">
+												<span class="text-content__answers-counter">6 ответов</span>
+												<span class="text-content__respondents-list">Отвечают: Артемий Лебедев, Алексей Андреев, Стас Жицкий, Даниил Сергеев, Алексей Аметов, Роман Любимов</span>
+											</div>
+											<div class="text-content__lead">
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+											</div>
+											<div class="filter filter--answers filter--hidden">
+												<ul class="filter__list">
+													<li class="filter__item">
+														<a href="#" class="filter__link">Сначала</a>
+													</li>
+													<li class="filter__item">
+														<a href="#" class="filter__link">лучшие</a>
+													</li>
+													<li class="filter__item">
+														<a href="#" class="filter__link">последние</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+								</article>
+								<section class="question-card__answers">
+									<article id="answer38" class="question-card__answer">
+										<article class="user-info question-card__user-info">
+											<div class="user-info__avatar">
+												<img src="assets/images/content/avatar--06.jpg" alt="Артемий Лебедев" width="90" height="82" />
+											</div>
+											<div class="user-info__container">
+												<span class="user-info__name">Артемий Лебедев</span>
+												<span class="user-info__activity">Худрук Студии Лебедева</span>
+												<span class="user-info__rating">0.0</span>
+											</div>
+											<a href="#" class="user-info__subscribe">Подписаться</a>
+										</article>
+										<article class="text-content question-card__text-content">
+											<div class="text-content__secondary-content">
+												<span class="text-content__subscribers-counter">2,3K</span>
+												<time datetime="2016-06-04" class="text-content__pub-date">04&nbsp;июн</time>
+											</div>
+											<div class="text-content__main-content">
+												<div class="text-content__answer">
+													<p>Идите на**й.</p>
+												</div>
+											</div>
+										</article>
+										<span class="question-card__extended-answer">
+											<a href="#answer38">Читать полный ответ</a>
+										</span>
+									</article>
+									<article id="answer39" class="question-card__answer">
+										<article class="user-info question-card__user-info">
+											<div class="user-info__avatar">
+												<img src="assets/images/content/avatar--07.jpg" alt="Алексей Андреев" width="90" height="82" />
+											</div>
+											<div class="user-info__container">
+												<span class="user-info__name">Алексей Андреев</span>
+												<span class="user-info__activity">Генеральный директор Depot WPF,
+													<br>сопрезидент АБКР</span>
+												<span class="user-info__rating">5.2</span>
+											</div>
+											<a href="#" class="user-info__subscribe">Подписаться</a>
+										</article>
+										<article class="text-content question-card__text-content">
+											<div class="text-content__secondary-content">
+												<span class="text-content__subscribers-counter">2,3K</span>
+												<time datetime="2016-06-04" class="text-content__pub-date">04&nbsp;июн</time>
+											</div>
+											<div class="text-content__main-content">
+												<div class="text-content__answer">
+													<p>Средняя стоимость разработки платформы бренда и позиционирования — от 500 тысяч до 2 000 000 рублей, дизайна —
+														около миллиона, всевозможных его расширений и адаптаций — еще миллиона полтора-два. Итого средний проект по
+														ребрендингу стоит около трех с половиной — четырех миллионов.</p>
+													<p>Средняя стоимость разработки платформы бренда и позиционирования — от 500 тысяч до 2 000 000 рублей, дизайна —
+														около миллиона, всевозможных его расширений и адаптаций — еще миллиона полтора-два. Итого средний проект по
+														ребрендингу стоит около трех с половиной — четырех миллионов.</p>
+													<p>Средняя стоимость разработки платформы бренда и позиционирования — от 500 тысяч до 2 000 000 рублей, дизайна —
+														около миллиона, всевозможных его расширений и адаптаций — еще миллиона полтора-два. Итого средний проект по
+														ребрендингу стоит около трех с половиной — четырех миллионов.</p>
+												</div>
+											</div>
+										</article>
+										<span class="question-card__extended-answer">
+											<a href="#answer39">Читать полный ответ</a>
+										</span>
+									</article>
+									<article id="answer55" class="question-card__answer">
+										<article class="user-info question-card__user-info">
+											<div class="user-info__avatar">
+												<img src="assets/images/content/avatar--08.jpg" alt="Стас Жицкий" width="90" height="82" />
+											</div>
+											<div class="user-info__container">
+												<span class="user-info__name">Стас Жицкий</span>
+												<span class="user-info__activity">OPEN!Design</span>
+												<span class="user-info__rating">6.9</span>
+											</div>
+											<a href="#" class="user-info__subscribe">Подписаться</a>
+										</article>
+										<article class="text-content question-card__text-content">
+											<div class="text-content__secondary-content">
+												<span class="text-content__subscribers-counter">2,3K</span>
+												<time datetime="2016-06-04" class="text-content__pub-date">04&nbsp;июн</time>
+											</div>
+											<div class="text-content__main-content">
+												<div class="text-content__answer">
+													<p>Мне кажется, нам как потребителям этой самой буквы лучше стоит думать о том, что она какое-никакое удобство
+														привносит в нашу городскую среду, а не о том, насколько страшно обогатился Артемий Лебедев.</p>
+													<p>Мне кажется, нам как потребителям этой самой буквы лучше стоит думать о том, что она какое-никакое удобство
+														привносит в нашу городскую среду, а не о том, насколько страшно обогатился Артемий Лебедев.</p>
+													<p>Мне кажется, нам как потребителям этой самой буквы лучше стоит думать о том, что она какое-никакое удобство
+														привносит в нашу городскую среду, а не о том, насколько страшно обогатился Артемий Лебедев.</p>
+												</div>
+											</div>
+										</article>
+										<span class="question-card__extended-answer">
+											<a href="#answer55">Читать полный ответ</a>
+										</span>
+									</article>
+									<article id="answer93" class="question-card__answer">
+										<article class="user-info question-card__user-info">
+											<div class="user-info__avatar">
+												<img src="assets/images/content/avatar--09.jpg" alt="Даниил Сергеев" width="90" height="82" />
+											</div>
+											<div class="user-info__container">
+												<span class="user-info__name">Даниил Сергеев</span>
+												<span class="user-info__activity">Куратор FIRMA</span>
+												<span class="user-info__rating">7.8</span>
+											</div>
+											<a href="#" class="user-info__subscribe">Подписаться</a>
+										</article>
+										<article class="text-content question-card__text-content">
+											<div class="text-content__secondary-content">
+												<span class="text-content__subscribers-counter">2,3K</span>
+												<time datetime="2016-06-04" class="text-content__pub-date">04&nbsp;июн</time>
+											</div>
+											<div class="text-content__main-content">
+												<div class="text-content__answer">
+													<p>Это просто рассуждения дилетантов. С таким же смыслом я могу говорить о бозоне Хиггса — это никак науке не поможет.</p>
+													<p>Это просто рассуждения дилетантов. С таким же смыслом я могу говорить о бозоне Хиггса — это никак науке не поможет.</p>
+													<p>Это просто рассуждения дилетантов. С таким же смыслом я могу говорить о бозоне Хиггса — это никак науке не поможет.</p>
+													<p>Это просто рассуждения дилетантов. С таким же смыслом я могу говорить о бозоне Хиггса — это никак науке не поможет.</p>
+												</div>
+											</div>
+										</article>
+										<span class="question-card__extended-answer">
+											<a href="#answer93">Читать полный ответ</a>
+										</span>
+									</article>
+								</section>
+							</section>
+							<section class="question-card">
+								<a href="#" class="question-card__close">
+									<img src="assets/images/icon__close.png" alt="'close' icon" width="28" height="28" />
+								</a>
+								<article class="question-card__question">
+									<article class="user-info question-card__user-info">
+										<div class="user-info__avatar">
+											<img src="assets/images/content/avatar--02.jpg" alt="Константин Константинопольский" width="90" height="82" />
+										</div>
+										<div class="user-info__container">
+											<span class="user-info__name">Константин Константинопольский</span>
+											<span class="user-info__activity">Журналист, блогер</span>
+											<span class="user-info__rating">3.9</span>
+										</div>
+										<a href="#" class="user-info__subscribe">Подписаться</a>
+									</article>
+									<article class="text-content question-card__text-content">
+										<div class="text-content__secondary-content">
+											<span class="text-content__subscribers-counter">1,2K</span>
+											<time datetime="2016-06-03" class="text-content__pub-date">3&nbsp;июн</time>
+											<span class="text-content__rubric">Литература</span>
+										</div>
+										<div class="text-content__main-content">
+											<header class="text-content__question-header">
+												<h1 class="text-content__question-heading">Были ли подвержены творческим кризисам Пушкин или Толстой?</h1>
+											</header>
+											<div class="text-content__answers-info">
+												<span class="text-content__answers-counter">3 ответа</span>
+												<span class="text-content__respondents-list">Отвечают: Доминик Данн, Рэй Бредбери, Елена Вороненко</span>
+											</div>
+											<div class="text-content__lead">
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+												<p>Вводная часть, предваряющая ответы на поставленный вопрос</p>
+											</div>
+											<div class="filter filter--answers filter--hidden">
+												<ul class="filter__list">
+													<li class="filter__item">
+														<a href="#" class="filter__link">Сначала</a>
+													</li>
+													<li class="filter__item">
+														<a href="#" class="filter__link">лучшие</a>
+													</li>
+													<li class="filter__item">
+														<a href="#" class="filter__link">последние</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+								</article>
+								<section class="question-card__answers">
+									<article id="answer86" class="question-card__answer">
+										<article class="user-info question-card__user-info">
+											<div class="user-info__avatar">
+												<img src="assets/images/content/avatar--10.jpg" alt="Доминик Данн" width="90" height="82" />
+											</div>
+											<div class="user-info__container">
+												<span class="user-info__name">Доминик Данн</span>
+												<span class="user-info__activity">Писатель</span>
+												<span class="user-info__rating">7.6</span>
+											</div>
+											<a href="#" class="user-info__subscribe">Подписаться</a>
+										</article>
+										<article class="text-content question-card__text-content">
+											<div class="text-content__secondary-content">
+												<span class="text-content__subscribers-counter">2,3K</span>
+												<time datetime="2016-06-04" class="text-content__pub-date">04&nbsp;июн</time>
+											</div>
+											<div class="text-content__main-content">
+												<div class="text-content__answer">
+													<p>Думаю, вести дневник — самое лучшее для писателя… Особенно бесценным окажется журнал при творческом тупике.
+														Записывайте туда жалобы самому себе на творческий кризис. Рассказывайте, как плохо.</p>
+													<p>Думаю, вести дневник — самое лучшее для писателя… Особенно бесценным окажется журнал при творческом тупике.
+														Записывайте туда жалобы самому себе на творческий кризис. Рассказывайте, как плохо.</p>
+													<p>Думаю, вести дневник — самое лучшее для писателя… Особенно бесценным окажется журнал при творческом тупике.
+														Записывайте туда жалобы самому себе на творческий кризис. Рассказывайте, как плохо.</p>
+												</div>
+											</div>
+										</article>
+										<span class="question-card__extended-answer">
+											<a href="#answer86">Читать полный ответ</a>
+										</span>
+									</article>
+								</section>
+							</section>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+		<script src="scripts/app.min.js"></script>
+	</body>
+
+</html>

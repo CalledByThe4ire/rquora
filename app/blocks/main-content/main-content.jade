@@ -1,7 +1,0 @@
-include ../questions/questions
-include ../question-card/question-card
-
-mixin main-content()
-	+b('main').main-content&attributes(attributes)
-		+questions
-			+question-card(getData('content'))

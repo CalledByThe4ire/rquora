@@ -1,9 +1,0 @@
-include ../user-info/user-info
-
-mixin section-block(data)
-	+b.section-block&attributes(attributes)
-		each section in data.questionSection
-			+user-info(section.authorInfo)(class='section-block__user-info')
-			+content-info(section.questionInfo)
-			(class='section-block__content-info')
-
