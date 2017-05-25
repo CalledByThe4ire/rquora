@@ -7,8 +7,11 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	// variables
 	const indexContainer = document.querySelector('.index__container');
 	const questionsContainer = document.querySelector('.questions__container');
+
 	const filters = document.querySelectorAll('.filter');
 	const avatars = Array.prototype.slice.call(document.querySelectorAll('.user-info__avatar img'));
+
+	const animationClasses = ['animated', 'zoomInUp', 'bounceInLeft', 'bounceOutRight'];
 
 	// question-card variables
 	const questionCardCollection = Array.prototype.slice.call(document.querySelectorAll('.question-card'));
@@ -26,6 +29,11 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		avatar.setAttribute('height', '41');
 	});
 
+	// add initial animation
+	questionCardCollection.forEach(elem => {
+		elem.classList.add(animationClasses[0], animationClasses[1]);
+	});
+
 	// truncateString variables
 	const len = 150;
 	const truncatedFirstP = firstP.map(paragraph => {
@@ -40,6 +48,17 @@ export default window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	/**
+	 * Clear animate.css classes.
+	 */
+	const removeAnimation = () => {
+		questionCardCollection.forEach(elem => {
+			if (elem.classList.contains(...animationClasses)) {
+				elem.classList.remove(...animationClasses);
+			}
+		});
+	};
+
+	/**
 	 * Open question-card block in detailed view
 	 * @param {MouseEvent} evt
 	 */
@@ -50,7 +69,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		const currentUserInfo = Array.prototype.slice.call(questionCard.querySelectorAll('.user-info'));
 
 		indexContainer.classList.add('index__container--transparent');
-		questionCard.classList.add('question-card--background-color');
+		questionCard.classList.add('question-card--background-color', animationClasses[0], animationClasses[2]);
 		questionsContainer.classList.add('questions__container--full-width');
 
 		filters.forEach(filter => {
@@ -71,7 +90,6 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		questionCardCollection.forEach(elem => {
 
 			if (elem !== questionCard) {
-
 				questionCard.classList.add('question-card--detailed-view');
 				elem.classList.add('question-card--hidden');
 
@@ -105,6 +123,7 @@ export default window.addEventListener('DOMContentLoaded', () => {
 		const currentUserInfo = Array.prototype.slice.call(questionCard.querySelectorAll('.user-info'));
 
 		indexContainer.classList.remove('index__container--transparent');
+		questionCard.classList.add(animationClasses[0], animationClasses[3]);
 		questionCard.classList.remove('question-card--background-color');
 		questionsContainer.classList.remove('questions__container--full-width');
 
@@ -124,8 +143,9 @@ export default window.addEventListener('DOMContentLoaded', () => {
 
 		questionCardCollection.forEach(elem => {
 
-			if (elem !== questionCard) {
+			elem.classList.add(animationClasses[0], animationClasses[1]);
 
+			if (elem !== questionCard) {
 				questionCard.classList.remove('question-card--detailed-view');
 				elem.classList.remove('question-card--hidden');
 
@@ -153,6 +173,10 @@ export default window.addEventListener('DOMContentLoaded', () => {
 
 	defaultViewLinksCollection.forEach(elem => {
 		elem.addEventListener('click', collapseDetailedView);
+	});
+
+	questionCardCollection.forEach(elem => {
+		elem.addEventListener('transitionend', removeAnimation);
 	});
 
 });
