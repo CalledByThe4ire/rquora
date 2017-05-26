@@ -11,10 +11,10 @@ const utils = {
 		const matchesSelector = el.matches || el.webkitMatchesSelector || el.mozMatchesSelector || el.msMatchesSelector;
 
 		while (el) {
-			if (matchesSelector.call(el, selector)) {
-				return el;
-			} else {
+			if (!matchesSelector.call(el, selector)) {
 				el = el.parentElement;
+			}else {
+				return el;
 			}
 		}
 		return null;
